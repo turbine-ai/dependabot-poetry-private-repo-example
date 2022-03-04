@@ -1,0 +1,18 @@
+version: 2
+registries:
+  privaterepo:
+    type: python-index
+    url: https://turbinetest.jfrog.io/artifactory/api/pypi/privaterepo/simple
+    username: daniel.segesdi@turbine.ai
+    password: ${{secrets.PACKAGE_FEED_PASSWORD}}
+    replaces-base: true
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    registries:
+      - privaterepo
+    insecure-external-code-execution: allow
+    schedule:
+      interval: "daily"
+      time: "09:00"
+    open-pull-requests-limit: 5
