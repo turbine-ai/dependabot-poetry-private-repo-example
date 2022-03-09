@@ -8,6 +8,7 @@ license = "MIT"
 [[tool.poetry.source]]
 name = "privaterepo"
 url = "https://turbinetest.jfrog.io/artifactory/api/pypi/privaterepo/simple"
+default = true
 
 [tool.poetry.dependencies]
 python = "^3.9"

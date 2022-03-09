@@ -5,7 +5,6 @@ registries:
     url: https://turbinetest.jfrog.io/artifactory/api/pypi/privaterepo/simple
     username: daniel.segesdi@turbine.ai
     password: ${{secrets.PACKAGE_FEED_PASSWORD}}
-    replaces-base: true
 updates:
   - package-ecosystem: "pip"
     directory: "/"
